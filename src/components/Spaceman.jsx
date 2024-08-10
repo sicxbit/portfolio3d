@@ -2,7 +2,6 @@ import { useAnimations, useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useRef, useState } from "react";
 import spacemanScene from "../assets/3d/spaceman.glb";
-import CanvasLoader from "./Loader";
 
 const Spaceman = ({ scale, position }) => {
   const spacemanRef = useRef();
@@ -66,7 +65,6 @@ const SpacemanCanvas = ({ scrollContainer }) => {
 
   return (
     <Canvas className={`w-full h-screen bg-transparent z-10`} camera={{ near: 0.1, far: 1000 }}>
-      <Suspense fallback={<CanvasLoader />}>
         <directionalLight position={[1, 1, 1]} intensity={2} />
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 5, 10]} intensity={2} />
@@ -74,7 +72,6 @@ const SpacemanCanvas = ({ scrollContainer }) => {
         <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1} />
 
         <Spaceman rotationX={rotationX} rotationY={rotationY} scale={scale} position={position} />
-      </Suspense>
     </Canvas>
   );
 };
