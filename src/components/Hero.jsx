@@ -23,9 +23,6 @@ const Hero = ({ scrollContainer }) => {
         <div className="mountains-container">
           <img src='src/assets/parallax/mountains.svg' alt='' />
         </div>
-        <div className="river-container">
-          <img src='src/assets/parallax/river.svg' alt='' />
-        </div>
         <div className="trees-container">
           <img src="src/assets/parallax/trees.svg" alt="" />
         </div>

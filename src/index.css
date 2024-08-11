@@ -102,12 +102,11 @@ button:focus-visible {
 }
 .title_header {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; /* Assuming this is your font family */
-  font-weight: 500; /* medium weight */
+  font-weight: 500; 
   color: white;
   font-size: 40px;
   line-height: 110px;
 
-  /* Media queries for responsiveness */
   @media (min-width: 320px) {
     font-size: 50px;
   }
@@ -186,11 +185,6 @@ button:focus-visible {
 }
 
 .trees-container {
-  z-index: 6;
-  pointer-events: none;
-}
-
-.river-container {
   z-index: 6;
   pointer-events: none;
 }
