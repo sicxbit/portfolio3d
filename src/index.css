@@ -90,29 +90,107 @@ button:focus-visible {
   width: 100%;
 }
 
-.background-container{
+.background-container {
   z-index: 1;
 }
 
+.title_section {
+  z-index: 2;
+  position: fixed;
+  top: 0px;
+  left: 100px;
+}
+.title_header {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; /* Assuming this is your font family */
+  font-weight: 500; /* medium weight */
+  color: white;
+  font-size: 40px;
+  line-height: 110px;
+
+  /* Media queries for responsiveness */
+  @media (min-width: 320px) {
+    font-size: 50px;
+  }
+
+  @media (min-width: 640px) {
+    font-size: 68px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 80px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 100px;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 180px;
+    line-height: 160px;
+  }
+}
+
+.title_description {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 40px;
+  color: white;
+  text-align: left;
+  max-width: 320px;
+ 
+
+  @media (min-width: 640px) {
+    font-size: 30px;
+    line-height: 40px;
+    max-width: 480px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 36px;
+    line-height: 50px;
+    max-width: 640px;
+  }
+}
+
 .spaceman-container {
-  position: absolute;
-  top: 20%;
+  position: fixed;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
+
   width: auto;
   height: 50%;
+
+  @media (max-width: 768px) {
+    top: 20%;
+    height: 30%;
+  }
+
+  @media (max-width: 480px) {
+    height: 10%;
+    top: 10%;
+  }
 }
 
-.mountains-container{
+
+.mountains-container {
   z-index: 4;
+  transition: top 1s ease-in-out;
+  pointer-events: none;
 }
-.forest_line-container{
+
+.forest_line-container {
   z-index: 5;
+  pointer-events: none;
 }
-.trees-container{
+
+.trees-container {
   z-index: 6;
+  pointer-events: none;
 }
-.river-container{
+
+.river-container {
   z-index: 6;
+  pointer-events: none;
 }

@@ -4,8 +4,13 @@ import SpacemanCanvas from './Spaceman.jsx'
 const Hero = ({ scrollContainer }) => {
   return (
     <div class="homepage">
-      <h1>hello</h1>
       <div id="hero" class="parallax">
+        <div class="title_section">
+          <h1 class="title_header">Arunjith T S</h1>
+          <span class="title_description">
+            I make websites
+          </span>
+        </div>
         <div className="background-container">
           <img src='src/assets/parallax/background.svg' alt='' />
         </div>
