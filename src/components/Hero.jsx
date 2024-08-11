@@ -3,16 +3,29 @@ import SpacemanCanvas from './Spaceman.jsx'
 
 const Hero = ({ scrollContainer }) => {
   return (
-    <div id="hero" class="parallax">
-      <h1>Hero section</h1>
-      <img class="background" src='src/assets/parallax/background.svg' alt='' />
-      <img class="forest_line"src='src/assets/parallax/treeline.svg' alt='' />
-      <img class="mountains" src='src/assets/parallax/mountains.svg' alt='' />
-      <img class="northern_lights_1" src='src/assets/parallax/northernLights.svg' alt='' />
-      <img class="river" src='src/assets/parallax/river.svg' alt='' />
-      <img class="stars"src="src/assets/parallax/stars.svg" alt="" />
-      <img class="trees"src="src/assets/parallax/trees.svg" alt="" />
-      <SpacemanCanvas />
+    <div class="homepage">
+      <h1>hello</h1>
+      <div id="hero" class="parallax">
+        <div className="background-container">
+          <img src='src/assets/parallax/background.svg' alt='' />
+        </div>
+        <div className="forest_line-container">
+          <img src='src/assets/parallax/treeline.svg' alt='' />
+        </div>
+        <div className='spaceman-container'>
+          <SpacemanCanvas />
+        </div>
+        <div className="mountains-container">
+          <img src='src/assets/parallax/mountains.svg' alt='' />
+        </div>
+        <div className="river-container">
+          <img src='src/assets/parallax/river.svg' alt='' />
+        </div>
+        <div className="trees-container">
+          <img src="src/assets/parallax/trees.svg" alt="" />
+        </div>
+      </div>
+
     </div>
   )
 }

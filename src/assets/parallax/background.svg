@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1378.32 770.12">
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1927.21 1078.76">
   <defs>
     <style>
       .cls-1 {
@@ -7,7 +7,7 @@
         stroke-width: 0px;
       }
     </style>
-    <radialGradient id="radial-gradient" cx="132.43" cy="876.33" fx="132.43" fy="876.33" r="1524.16" gradientTransform="translate(609.64 134.51) scale(.71 .59)" gradientUnits="userSpaceOnUse">
+    <radialGradient id="radial-gradient" cx="395.21" cy="1038" fx="395.21" fy="1038" r="1524.16" gradientTransform="translate(592.54 54.7) scale(.99 .83)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#00819d"/>
       <stop offset=".28" stop-color="#004e71"/>
       <stop offset=".57" stop-color="#001e49"/>
@@ -16,5 +16,5 @@
       <stop offset=".96" stop-color="#000008"/>
     </radialGradient>
   </defs>
-  <rect class="cls-1" width="1378.32" height="770.12"/>
+  <rect class="cls-1" width="1927.21" height="1078.76"/>
 </svg>
