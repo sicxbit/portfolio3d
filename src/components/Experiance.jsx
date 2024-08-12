@@ -56,16 +56,18 @@ const ExperienceCard = ({ experience }) => {
 
 const Experience = () => {
   return (
-  <div className="experiance-container">
-    <h1>What i've done so far</h1>
-    <section className=''>
-      <VerticalTimeline>
-        {experiences.map((experience, index) => (
-          <ExperienceCard key={index} experience={experience} />
-        ))}
-      </VerticalTimeline>
-    </section>
-  </div>
+    <div className="experiance-container">
+      <div className='experiance'>
+        <h1>What i've done so far</h1>
+        <section className=''>
+          <VerticalTimeline>
+            {experiences.map((experience, index) => (
+              <ExperienceCard key={index} experience={experience} />
+            ))}
+          </VerticalTimeline>
+        </section>
+      </div>
+    </div>
   );
 };
 

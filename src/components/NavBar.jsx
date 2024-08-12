@@ -11,9 +11,8 @@ function NavBar() {
   }, [scrollY]);
 
   return (
-    <nav className={`navbar  
- ${showNavBar ? 'show' : ''}`}>
-      <div className="navbar-content">  
+    <nav className={`navbar ${showNavBar ? 'show' : ''}`}>
+      <div className="navbar-content">
         <div className="logo">Arunjith</div>
         <div className="nav-links">
           <a href="#">Works</a>
