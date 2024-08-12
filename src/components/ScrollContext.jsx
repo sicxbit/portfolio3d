@@ -7,7 +7,7 @@ export const ScrollProvider = ({ children }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollY(window.scrollY); // Update scrollY state on window scroll
+      setScrollY(window.scrollY);
     };
 
     window.addEventListener('scroll', handleScroll);

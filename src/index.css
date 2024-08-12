@@ -73,7 +73,7 @@ button:focus-visible {
 }
 
 .parallax {
-  height: 100vh;
+  height: 113vh;
   overflow: hidden;
   z-index: 0;
 }
@@ -220,4 +220,15 @@ button:focus-visible {
 .navbar.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+.experiance-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position:absolute;
+  padding: 15px;
+  z-index: 3;
+  background-color: black;
 }
