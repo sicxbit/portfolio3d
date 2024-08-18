@@ -234,19 +234,19 @@ button:focus-visible {
   padding: 15px;
   margin-top: 400px;
   z-index: 10;
+
 }
 @media (min-width: 1024px) {
   .experiance-container {
-    top: 50vh; /* Adjusted for large screens */
-    margin-top: 400px; /* Reduced margin-top */
+    top: 50vh;
+    margin-top: 400px;
   }
 }
 
-/* Medium screens (tablets) */
 @media (min-width: 768px) and (max-width: 1023px) {
   .experiance-container {
-    top: 40vh; /* Adjust for medium screens */
-    margin-top: 200px; /* Adjust margin-top */
+    top: 40vh;
+    margin-top: 200px;
   }
 }
 
@@ -261,4 +261,9 @@ button:focus-visible {
 
 .experiance {
   z-index: 4;
+}
+
+.exp_box{
+  position: absolute;
+  z-index: 10;
 }
