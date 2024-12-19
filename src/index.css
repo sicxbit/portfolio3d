@@ -225,9 +225,6 @@ button:focus-visible {
   overflow: hidden;
   z-index: 0;
 }
-.homepage{
-  
-}
 .experiance-container {
   display: flex;
   flex-direction: column;
@@ -281,3 +278,8 @@ button:focus-visible {
 }
 
   
+.contact-box{
+  margin-top: 1700px;
+  z-index: 5;
+  background-color: #0000;
+}

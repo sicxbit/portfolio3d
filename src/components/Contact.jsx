@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Contact() {
-    return (<div>
+    return (<div class = "contact-box">
         <h1>Contact</h1>
         <span>contact me</span>
         <h1>
