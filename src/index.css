@@ -272,6 +272,12 @@ button:focus-visible {
 }
 
 
-* {
-  outline: 1px solid red; /* Debugging: Highlights all elements */
+
+.experianceTitle{
+  text-align: center
 }
+.experianceWrap{
+  padding:90px;
+}
+
+  

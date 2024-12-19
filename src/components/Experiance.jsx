@@ -89,8 +89,9 @@ const Experience = () => {
 
   return (
     <div className="experiance-container">
+      <div class = "experianceWrap">
       <motion.div initial="hidden" animate="show" variants={textVariant(0)}>
-        <h2 className="text-white font-bold md:text-[80px] sm:text-[50px] text-[40px] text-center">
+        <h2 class="experianceTitle">
           Experience
         </h2>
       </motion.div>
@@ -111,6 +112,7 @@ const Experience = () => {
         <div className="flex justify-end z-10 sm:block hidden">
           <ExperienceDetails experience={selectedJob} />
         </div>
+      </div>
       </div>
     </div>
   );
