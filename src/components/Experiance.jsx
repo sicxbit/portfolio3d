@@ -79,7 +79,7 @@ const Experience = () => {
       setIsMobile(window.innerWidth < 640);
     };
 
-    handleResize(); // Check initial screen size
+    handleResize(); 
     window.addEventListener("resize", handleResize);
 
     return () => {

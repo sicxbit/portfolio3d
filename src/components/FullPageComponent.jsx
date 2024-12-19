@@ -1,9 +1,10 @@
+// filepath: FullPageComponent.jsx
 import React, { useState, useRef, useEffect } from 'react';
 import NavBar from './NavBar';
 import Hero from './Hero';
 import Experiance from './Experiance';
 import Contact from './Contact';
-import ScrollProvider from './ScrollContext';
+import { ScrollProvider } from './ScrollContext';
 
 function FullPageComponent() {
     const [scrollY, setScrollY] = useState(0);
@@ -20,15 +21,14 @@ function FullPageComponent() {
     }, []);
 
     return (
-        <div ref={fullPageRef} className="full-page-content">
-            <ScrollProvider>
+        <ScrollProvider>
+            <div ref={fullPageRef} className="full-page-container">
                 <NavBar />
                 <Hero />
                 <Experiance />
                 <Contact />
-                <NavBar scrollY={scrollY} />
-            </ScrollProvider>
-        </div>
+            </div>
+        </ScrollProvider>
     );
 }
 

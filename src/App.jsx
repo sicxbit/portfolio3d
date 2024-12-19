@@ -1,7 +1,6 @@
-import React from 'react'
-import { Contact, Experiance, Hero, NavBar, Portfolio } from './components'
-import FullPageComponent from './components/FullPageComponent'
-
+import React from 'react';
+import FullPageComponent from './components/FullPageComponent';
+import "./index.css";
 function App() {
   return (
   <div>

@@ -7,13 +7,13 @@ const Hero = () => {
   const showSpacemanAndTitle = scrollY <= 900
   
   return (
-    <div class="homepage">
-      <div id="hero" class="parallax">
+    <div className="hero-container">
+      <div className="background-container">
         {showSpacemanAndTitle && (
           <div class="title_section">
             <h1 class="title_header">Arunjith T S</h1>
             <span class="title_description">
-              I make websites
+              what is wrong with this borders man?
             </span>
           </div>
         )}

@@ -1,3 +1,7 @@
+html, body {
+  overflow-x: hidden;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -231,7 +235,6 @@ button:focus-visible {
   width: 100%;
   position: absolute;
   top: 50vh;
-  padding: 15px;
   margin-top: 400px;
   z-index: 10;
 
@@ -266,4 +269,9 @@ button:focus-visible {
 .exp_box{
   position: absolute;
   z-index: 10;
+}
+
+
+* {
+  outline: 1px solid red; /* Debugging: Highlights all elements */
 }

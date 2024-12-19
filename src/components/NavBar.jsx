@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useContext } from 'react';
 import { ScrollContext } from './ScrollContext';
 
@@ -16,7 +17,7 @@ function NavBar() {
         <div className="logo">Arunjith</div>
         <div className="nav-links">
           <a href="#">Works</a>
-          <a href="#">Contact</a>
+          {/* Add other nav links here */}
         </div>
       </div>
     </nav>
