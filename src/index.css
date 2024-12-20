@@ -277,9 +277,7 @@ button:focus-visible {
   padding:90px;
 }
 
-  
-.contact-box{
-  margin-top: 1700px;
-  z-index: 5;
-  background-color: #0000;
+.full-page-container {
+  width: 100vh;
+  height: 100vh;
 }

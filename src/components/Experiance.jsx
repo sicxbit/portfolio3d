@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { motion } from "framer-motion";
 import 'react-vertical-timeline-component/style.min.css';
 import { experiences } from '../constants'; // Import experiences from your old website
+import Contact from "./Contact";
+
 
 const textVariant = (delay) => {
   return {
@@ -114,6 +116,7 @@ const Experience = () => {
         </div>
       </div>
       </div>
+      <Contact />
     </div>
   );
 };

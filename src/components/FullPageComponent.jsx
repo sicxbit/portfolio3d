@@ -1,9 +1,7 @@
-// filepath: FullPageComponent.jsx
 import React, { useState, useRef, useEffect } from 'react';
 import NavBar from './NavBar';
 import Hero from './Hero';
-import Experiance from './Experiance';
-import Contact from './Contact';
+import TheCanvas from './TheCanvas'; // Import TheCanvas
 import { ScrollProvider } from './ScrollContext';
 
 function FullPageComponent() {
@@ -25,8 +23,7 @@ function FullPageComponent() {
             <div ref={fullPageRef} className="full-page-container">
                 <NavBar />
                 <Hero />
-                <Experiance />
-                <Contact />
+                <TheCanvas /> {/* Include TheCanvas here */}
             </div>
         </ScrollProvider>
     );
