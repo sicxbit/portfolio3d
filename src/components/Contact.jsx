@@ -6,13 +6,13 @@ function Contact() {
     <div class="socials">
       <div class="card">
         <h2>Kaggle</h2>
-        <a href="" target="_blank">
+        <a href="https://www.kaggle.com/arunjithts" target='blank'>
           My Kaggle Profile Link
         </a>
       </div>
       <div class="card">
         <h2>GitHub</h2>
-        <a href="https://github.com/" target="_blank">
+        <a href="https://github.com/sicxbit" target="_blank">
           My GitHub Profile Link
         </a>
       </div>

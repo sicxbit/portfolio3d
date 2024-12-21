@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import 'react-vertical-timeline-component/style.min.css';
 import { experiences } from '../constants'; // Import experiences from your old website
 import Contact from "./Contact";
+import MyStory from './MyStory';
 
 
 const textVariant = (delay) => {
@@ -92,6 +93,7 @@ const Experience = () => {
   return (
     <div className="experiance-container">
       <div class = "experianceWrap">
+        <MyStory />
       <motion.div initial="hidden" animate="show" variants={textVariant(0)}>
         <h2 class="experianceTitle">
           Experience
