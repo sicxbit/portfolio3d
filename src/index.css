@@ -390,3 +390,10 @@ trying something out */
 * {
   border: 1px solid red;
 }
+
+.hero-container {
+  width: 100%;
+  height: 100vh;}
+.spaceman-container{
+  max-width: 100vw;
+}

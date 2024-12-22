@@ -65,7 +65,7 @@ const SpacemanCanvas = ({ scrollContainer }) => {
   }, [scrollContainer]);
 
   return (
-    <Canvas className={`w-full h-screen bg-transparent z-10 max-w-screen`} camera={{ near: 0.1, far: 1000 }}>
+    <Canvas className={`w-full h-screen bg-transparent z-10 max-w-screen`} camera={{ near: 0.1, far: 1000 }} resize={{ scroll: false }}>
         <directionalLight position={[1, 1, 1]} intensity={2} />
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 5, 10]} intensity={2} />

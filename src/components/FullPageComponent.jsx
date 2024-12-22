@@ -23,7 +23,7 @@ function FullPageComponent() {
             <div ref={fullPageRef} className="full-page-container">
                 <NavBar />
                 <Hero />
-                <TheCanvas /> {/* Include TheCanvas here */}
+                <TheCanvas /> 
             </div>
         </ScrollProvider>
     );
