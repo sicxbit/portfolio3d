@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -33,7 +34,7 @@ body {
   flex-direction: row;
   place-items: center;
   min-width: 320px;
-  
+
   background-color: black;
 }
 
@@ -92,6 +93,18 @@ button:focus-visible {
   width: 100%;
 }
 
+.mountains-container {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+}
+
+.trees-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 .background-container {
   z-index: 1;
 }
@@ -102,9 +115,11 @@ button:focus-visible {
   top: 0px;
   left: 100px;
 }
+
 .title_header {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; /* Assuming this is your font family */
-  font-weight: 500; 
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* Assuming this is your font family */
+  font-weight: 500;
   color: white;
   font-size: 40px;
   line-height: 110px;
@@ -138,7 +153,7 @@ button:focus-visible {
   color: white;
   text-align: left;
   max-width: 320px;
- 
+
 
   @media (min-width: 640px) {
     font-size: 30px;
@@ -190,13 +205,14 @@ button:focus-visible {
   z-index: 6;
   pointer-events: none;
 }
+
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: auto;
-  background-color: black; 
+  background-color: black;
   z-index: 3;
   transition: all 0.3s ease-in-out;
   opacity: 0;
@@ -227,6 +243,7 @@ button:focus-visible {
   overflow: hidden;
   z-index: 0;
 }
+
 .experiance-container {
   display: flex;
   flex-direction: column;
@@ -244,25 +261,27 @@ button:focus-visible {
   z-index: 4;
 }
 
-.exp_box{
+.exp_box {
   position: absolute;
   z-index: 10;
 }
 
 
 
-.experianceTitle{
+.experianceTitle {
   text-align: center
 }
-.experianceWrap{
-  padding:90px;
+
+.experianceWrap {
+  padding: 90px;
 }
 
 .full-page-container {
   width: 100vh;
   height: 100vh;
 }
-.contact-box{
+
+.contact-box {
   display: flex;
   flex-direction: column;
 }
@@ -272,6 +291,7 @@ button:focus-visible {
   flex-direction: column;
   gap: 20px;
 }
+
 /* 
 trying something out */
 
@@ -299,7 +319,8 @@ trying something out */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: center;
-  width: 200px; /* Adjust card width as needed */
+  width: 200px;
+  /* Adjust card width as needed */
 }
 
 .card h2 {
@@ -312,7 +333,7 @@ trying something out */
 }
 
 .mystoryCard {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 100px
@@ -327,24 +348,45 @@ trying something out */
   .title_header {
     font-size: 20px;
   }
+
   .title_description {
     font-size: 16px;
     max-width: 100px;
   }
-  .experianceWrap{
-    padding:0%;
+
+  .experianceWrap {
+    padding: 0%;
   }
-  .mystoryCard{
+
+  .mystoryCard {
     padding: 15px;
   }
-  .socials{
+
+  .socials {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
+
+
+  .mountains-container ,
+  .trees-container,
+  .forest_line-container,
+  .background-container {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .mountains-container {
+    bottom: 50%;
+  }
+
+  .trees-container {
+    bottom: -5%;
+  }
 }
 
 * {
-  border:1px solid red;
+  border: 1px solid red;
 }

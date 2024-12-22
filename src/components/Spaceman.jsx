@@ -30,6 +30,7 @@ const SpacemanCanvas = ({ scrollContainer }) => {
       const scrollTop = scrollContainer.current.scrollTop;
       const rotationXValue = scrollTop * -0.0006;
       const rotationYValue = scrollTop * -0.00075;
+      
       setRotationX(rotationXValue);
       setRotationY(rotationYValue);
     };

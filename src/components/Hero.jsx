@@ -8,7 +8,7 @@ const Hero = () => {
 
   return (
     <div className="hero-container">
-      <div className="background-container">
+      <div className="background">
         {showSpacemanAndTitle && (
           <div class="title_section">
             <h1 class="title_header">Arunjith T S</h1>
@@ -20,22 +20,22 @@ const Hero = () => {
         <div className="background-container">
           <img src='src/assets/parallax/background.svg' alt='' />
         </div>
-        <div className="forest_line-container">
-          <img src='src/assets/parallax/treeline.svg' alt='' />
-        </div>
         {showSpacemanAndTitle && (
           <div className='spaceman-container'>
             <SpacemanCanvas />
           </div>
         )}
-
-        <div className="mountains-container">
-          <img src='src/assets/parallax/mountains.svg' alt='' />
+        <div className='mountainsAndTrees-container'>
+          <div className="mountains-container">
+            <img src='src/assets/parallax/mountains.svg' alt='' />
+          </div>
+          <div className="trees-container">
+            <img src="src/assets/parallax/trees.svg" alt="" />
+          </div>
+          <div className="forest_line-container">
+            <img src='src/assets/parallax/treeline.svg' alt='' />
+          </div>
         </div>
-        <div className="trees-container">
-          <img src="src/assets/parallax/trees.svg" alt="" />
-        </div>
-
       </div>
 
     </div>
