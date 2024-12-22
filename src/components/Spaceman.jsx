@@ -30,6 +30,7 @@ const SpacemanCanvas = ({ scrollContainer }) => {
   const [scale, setScale] = useState([3, 3, 3]);
   const [position, setPosition] = useState([0.2, -0.7, 0]);
 
+  // Handle pointer move to rotate the spaceman along Y-axis
   const handlePointerMove = (event) => {
     const { clientX } = event;
     setRotationY(clientX * 0.01); // Rotate based on pointer position
@@ -76,9 +77,9 @@ const SpacemanCanvas = ({ scrollContainer }) => {
 
   return (
     <Canvas
-      className="w-full h-full bg-transparent z-10" 
-      camera={{ near: 0.1, far: 1000 }}
-      onPointerMove={handlePointerMove} 
+      className="w-full h-full bg-transparent z-10 max-w-screen"
+      camera={{ near: 0.1, far: 1000, fov: 98}}
+      onPointerMove={handlePointerMove} // Move only when pointer is over canvas
     >
       <directionalLight position={[1, 1, 1]} intensity={2} />
       <ambientLight intensity={0.5} />
