@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useRef, useState } from "react";
 import spacemanScene from "../assets/3d/spaceman.glb";
 
-const Spaceman = ({ scale, position }) => {
+const Spaceman = ({ scale, position, rotationX, rotationY }) => {
   const spacemanRef = useRef();
   const { scene, animations } = useGLTF(spacemanScene);
   const { actions } = useAnimations(animations, spacemanRef);
@@ -13,7 +13,12 @@ const Spaceman = ({ scale, position }) => {
   }, [actions]);
 
   return (
-    <mesh ref={spacemanRef} position={position} scale={scale} rotation={[0, 2.2, 0]}>
+    <mesh
+      ref={spacemanRef}
+      position={position}
+      scale={scale}
+      rotation={[rotationX, rotationY, 0]} // Lock the Z rotation
+    >
       <primitive object={scene} />
     </mesh>
   );
@@ -25,33 +30,38 @@ const SpacemanCanvas = ({ scrollContainer }) => {
   const [scale, setScale] = useState([3, 3, 3]);
   const [position, setPosition] = useState([0.2, -0.7, 0]);
 
+  const handlePointerMove = (event) => {
+    const { clientX } = event;
+    setRotationY(clientX * 0.01); // Rotate based on pointer position
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = scrollContainer.current.scrollTop;
       const rotationXValue = scrollTop * -0.0006;
       const rotationYValue = scrollTop * -0.00075;
-      
+
       setRotationX(rotationXValue);
       setRotationY(rotationYValue);
     };
 
     const handleResize = () => {
-      // if (window.innerWidth < 768) {
-      //   setScale([1, 1, 1]);
-      //   setPosition([0.2, -0.1, 0]);
-      // } else if (window.innerWidth < 1024) {
-      //   setScale([1.33, 1.33, 1.33]);
-      //   setPosition([0.2, -0.3, 0]);
-      // } else if (window.innerWidth < 1280) {
-      //   setScale([1.5, 1.5, 1.5]);
-      //   setPosition([0.2, -0.4, 0]);
-      // } else if (window.innerWidth < 1536) {
-      //   setScale([1.66, 1.66, 1.66]);
-      //   setPosition([0.2, -0.5, 0]);
-      // } else {
-      //   setScale([2, 2, 2]);
-      //   setPosition([0.2, -0.7, 0]);
-      // }
+      if (window.innerWidth < 768) {
+        setScale([1, 1, 1]);
+        setPosition([0.2, -0.1, 0]);
+      } else if (window.innerWidth < 1024) {
+        setScale([1.33, 1.33, 1.33]);
+        setPosition([0.2, -0.3, 0]);
+      } else if (window.innerWidth < 1280) {
+        setScale([1.5, 1.5, 1.5]);
+        setPosition([0.2, -0.4, 0]);
+      } else if (window.innerWidth < 1536) {
+        setScale([1.66, 1.66, 1.66]);
+        setPosition([0.2, -0.5, 0]);
+      } else {
+        setScale([2, 2, 2]);
+        setPosition([0.2, -0.7, 0]);
+      }
     };
 
     handleResize();
@@ -65,14 +75,23 @@ const SpacemanCanvas = ({ scrollContainer }) => {
   }, [scrollContainer]);
 
   return (
-    <Canvas className={`w-full h-screen bg-transparent z-10 max-w-screen`} camera={{ near: 0.1, far: 1000 }} resize={{ scroll: false }}>
-        <directionalLight position={[1, 1, 1]} intensity={2} />
-        <ambientLight intensity={0.5} />
-        <pointLight position={[10, 5, 10]} intensity={2} />
-        <spotLight position={[0, 50, 10]} angle={0.15} penumbra={1} intensity={2} />
-        <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1} />
+    <Canvas
+      className="w-full h-full bg-transparent z-10" 
+      camera={{ near: 0.1, far: 1000 }}
+      onPointerMove={handlePointerMove} 
+    >
+      <directionalLight position={[1, 1, 1]} intensity={2} />
+      <ambientLight intensity={0.5} />
+      <pointLight position={[10, 5, 10]} intensity={2} />
+      <spotLight position={[0, 50, 10]} angle={0.15} penumbra={1} intensity={2} />
+      <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1} />
 
-        <Spaceman rotationX={rotationX} rotationY={rotationY} scale={scale} position={position} />
+      <Spaceman
+        rotationX={rotationX}
+        rotationY={rotationY}
+        scale={scale}
+        position={position}
+      />
     </Canvas>
   );
 };
