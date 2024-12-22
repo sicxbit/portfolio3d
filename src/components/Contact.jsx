@@ -12,7 +12,8 @@ function Contact() {
       </div>
       <div class="card">
         <h2>GitHub</h2>
-        <a href="https://github.com/sicxbit" target="_blank">
+        <a href="https://github.com/sicxbit
+        // " target="_blank">
           My GitHub Profile Link
         </a>
       </div>

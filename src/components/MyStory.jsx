@@ -17,7 +17,7 @@ function MyStory() {
 
                 <p>I’m now looking for opportunities where I can fully utilize my skills in electronics, data, and technology to make a meaningful impact.</p>
 
-                <p>Let’s connect and create something amazing!</p>
+                <p>Let’s connect and create something amazingme!</p>
             </div>
         </div>
     );

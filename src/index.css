@@ -231,33 +231,12 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 200px;
   width: 100%;
   position: absolute;
   top: 50vh;
-  margin-top: 400px;
   z-index: 10;
 
-}
-@media (min-width: 1024px) {
-  .experiance-container {
-    top: 50vh;
-    margin-top: 400px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .experiance-container {
-    top: 40vh;
-    margin-top: 200px;
-  }
-}
-
-
-@media (max-width: 767px) {
-  .experiance-container {
-    top: 30vh; 
-    margin-top: 100px; 
-  }
 }
 
 
@@ -342,4 +321,30 @@ trying something out */
 .subHeader {
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 640px) {
+  .title_header {
+    font-size: 20px;
+  }
+  .title_description {
+    font-size: 16px;
+    max-width: 100px;
+  }
+  .experianceWrap{
+    padding:0%;
+  }
+  .mystoryCard{
+    padding: 15px;
+  }
+  .socials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+}
+
+* {
+  border:1px solid red;
 }

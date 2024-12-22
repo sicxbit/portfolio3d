@@ -5,7 +5,7 @@ import { ScrollContext } from './ScrollContext';
 const Hero = () => {
   const { scrollY } = useContext(ScrollContext);
   const showSpacemanAndTitle = scrollY <= 900
-  
+
   return (
     <div className="hero-container">
       <div className="background-container">
@@ -28,12 +28,14 @@ const Hero = () => {
             <SpacemanCanvas />
           </div>
         )}
+
         <div className="mountains-container">
           <img src='src/assets/parallax/mountains.svg' alt='' />
         </div>
         <div className="trees-container">
           <img src="src/assets/parallax/trees.svg" alt="" />
         </div>
+
       </div>
 
     </div>
