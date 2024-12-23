@@ -18,7 +18,7 @@ const Hero = () => {
           </div>
         )}
         <div className="background-container">
-          <img src='src/assets/parallax/background.svg' alt='' />
+          <img src='../src/assets/parallax/background.svg' alt='' />
         </div>
         {showSpacemanAndTitle && (
           <div className='spaceman-container'>
@@ -27,13 +27,13 @@ const Hero = () => {
         )}
         <div className='mountainsAndTrees-container'>
           <div className="mountains-container">
-            <img src='src/assets/parallax/mountains.svg' alt='' />
+            <img src='../src/assets/parallax/mountains.svg' alt='' />
           </div>
           <div className="trees-container">
-            <img src="src/assets/parallax/trees.svg" alt="" />
+            <img src="../src/assets/parallax/trees.svg" alt="" />
           </div>
           <div className="forest_line-container">
-            <img src='src/assets/parallax/treeline.svg' alt='' />
+            <img src='../src/assets/parallax/treeline.svg' alt='' />
           </div>
         </div>
       </div>
