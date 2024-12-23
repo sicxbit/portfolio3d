@@ -368,13 +368,6 @@ trying something out */
     align-items: center;
   }
 
-
-  .mountains-container ,
-  .trees-container,
-  .forest_line-container,
-  .background-container {
-    display: none;
-  }
 }
 
 @media (max-width: 768px) {
