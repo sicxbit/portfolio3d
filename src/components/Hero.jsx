@@ -1,45 +1,48 @@
-import React, { useContext, useState } from 'react'
-import SpacemanCanvas from './Spaceman.jsx'
+import React, { useContext } from 'react';
+import SpacemanCanvas from './Spaceman.jsx';
 import { ScrollContext } from './ScrollContext';
+import background from '../assets/parallax/background.svg';
+import mountains from '../assets/parallax/mountains.svg';
+import trees from '../assets/parallax/trees.svg';
+import treeline from '../assets/parallax/treeline.svg';
 
 const Hero = () => {
   const { scrollY } = useContext(ScrollContext);
-  const showSpacemanAndTitle = scrollY <= 900
+  const showSpacemanAndTitle = scrollY <= 900;
 
   return (
     <div className="hero-container">
       <div className="background">
         {showSpacemanAndTitle && (
-          <div class="title_section">
-            <h1 class="title_header">Arunjith T S</h1>
-            <span class="title_description">
+          <div className="title_section">
+            <h1 className="title_header">Arunjith T S</h1>
+            <span className="title_description">
               what is wrong with this borders man?
             </span>
           </div>
         )}
         <div className="background-container">
-          <img src='../src/assets/parallax/background.svg' alt='' />
+          <img src={background} alt="Background" />
         </div>
         {showSpacemanAndTitle && (
-          <div className='spaceman-container'>
+          <div className="spaceman-container">
             <SpacemanCanvas />
           </div>
         )}
-        <div className='mountainsAndTrees-container'>
+        <div className="mountainsAndTrees-container">
           <div className="mountains-container">
-            <img src='../src/assets/parallax/mountains.svg' alt='' />
+            <img src={mountains} alt="Mountains" />
           </div>
           <div className="trees-container">
-            <img src="../src/assets/parallax/trees.svg" alt="" />
+            <img src={trees} alt="Trees" />
           </div>
           <div className="forest_line-container">
-            <img src='../src/assets/parallax/treeline.svg' alt='' />
+            <img src={treeline} alt="Forest Line" />
           </div>
         </div>
       </div>
-
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

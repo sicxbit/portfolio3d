@@ -28,7 +28,7 @@ const SpacemanCanvas = ({ scrollContainer }) => {
   const [rotationX, setRotationX] = useState(0);
   const [rotationY, setRotationY] = useState(0);
   const [scale, setScale] = useState([3, 3, 3]);
-  const [position, setPosition] = useState([0.2, -0.7, 0]);
+  const [position, setPosition] = useState([0.1, 0.7, 0]);
 
   // Handle pointer move to rotate the spaceman along Y-axis
   const handlePointerMove = (event) => {
