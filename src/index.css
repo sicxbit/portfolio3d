@@ -121,13 +121,19 @@ button:focus-visible {
     font-size: 80px;
   }
 
-  @media (min-width: 1024px) {
-    font-size: 100px;
+  @media (max-width: 1040px) {
+    font-size: 100px; 
+    
   }
-
   @media (min-width: 1280px) {
     font-size: 180px;
     line-height: 160px;
+  }
+}
+
+@media (max-width: 1040px) {
+  .mystoryCard{
+      transform: translateY(-80px);
   }
 }
 
@@ -321,8 +327,7 @@ trying something out */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 100px
-}
+  padding: 0px 80px}
 
 .subHeader {
   display: flex;
