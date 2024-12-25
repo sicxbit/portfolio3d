@@ -103,7 +103,7 @@ button:focus-visible {
 
 .title_header {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  /* Assuming this is your font family */
+  
   font-weight: 500;
   color: white;
   font-size: 40px;
@@ -283,8 +283,6 @@ button:focus-visible {
   gap: 20px;
 }
 
-/* 
-trying something out */
 
 .contact-box {
   display: flex;
@@ -311,7 +309,6 @@ trying something out */
   padding: 20px;
   text-align: center;
   width: 200px;
-  /* Adjust card width as needed */
 }
 
 .card h2 {
