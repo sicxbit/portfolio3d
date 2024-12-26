@@ -104,7 +104,6 @@ button:focus-visible {
 
 .title_header {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  /* Assuming this is your font family */
   font-weight: 500;
   color: white;
   font-size: 100px;
@@ -273,6 +272,8 @@ button:focus-visible {
   gap: 20px;
 }
 
+/* 
+trying something out */
 
 .contact-box {
   display: flex;
@@ -299,6 +300,7 @@ button:focus-visible {
   padding: 20px;
   text-align: center;
   width: 200px;
+  /* Adjust card width as needed */
 }
 
 .card h2 {
@@ -350,4 +352,30 @@ button:focus-visible {
 .spaceman-container{
   width: 80vw;
   height: 80vh; 
+}
+
+
+
+/* need to find a styling tweak for smaller screens */
+
+
+@media (max-width: 768px) {
+  .background-container{
+    display: none;
+  }
+  .mountainsAndTrees-container{
+    display: none;
+  }
+  .spaceman-container{
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+  }
+  .title_section{
+    position:absolute;
+    width: 100%;
+  }
+  .spaceman-container{
+    height: 110%;
+  }
 }
