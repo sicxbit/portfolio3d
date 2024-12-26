@@ -99,7 +99,6 @@ button:focus-visible {
   position: fixed;
   top: 0px;
   left: 100px;
-  width: 100%;
 }
 
 .title_header {
@@ -373,9 +372,9 @@ trying something out */
   }
   .title_section{
     position:absolute;
-    width: 100%;
   }
   .spaceman-container{
     height: 110%;
   }
 }
+
