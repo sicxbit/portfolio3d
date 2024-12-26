@@ -99,14 +99,14 @@ button:focus-visible {
   position: fixed;
   top: 0px;
   left: 100px;
+  width: 100%;
 }
 
 .title_header {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  /* Assuming this is your font family */
   font-weight: 500;
   color: white;
-  font-size: 40px;
+  font-size: 100px;
   line-height: 110px;
 
   @media (min-width: 320px) {
@@ -143,7 +143,6 @@ button:focus-visible {
   line-height: 40px;
   color: white;
   text-align: left;
-  max-width: 320px;
 
 
   @media (min-width: 640px) {
@@ -168,16 +167,6 @@ button:focus-visible {
 
   width: auto;
   height: 50%;
-
-  @media (max-width: 768px) {
-    top: 20%;
-    height: 30%;
-  }
-
-  @media (max-width: 480px) {
-    height: 10%;
-    top: 10%;
-  }
 }
 
 
@@ -360,17 +349,33 @@ trying something out */
 
 }
 
-@media (max-width: 768px) {
-  .mountains-container {
-    bottom: 50%;
-  }
-
-  .trees-container {
-    bottom: -5%;
-  }
-}
-
 .spaceman-container{
   width: 80vw;
   height: 80vh; 
+}
+
+
+
+/* need to find a styling tweak for smaller screens */
+
+
+@media (max-width: 768px) {
+  .background-container{
+    display: none;
+  }
+  .mountainsAndTrees-container{
+    display: none;
+  }
+  .spaceman-container{
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+  }
+  .title_section{
+    position:absolute;
+    width: 100%;
+  }
+  .spaceman-container{
+    height: 110%;
+  }
 }
