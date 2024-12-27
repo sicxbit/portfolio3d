@@ -1,5 +1,5 @@
 import { useAnimations, useGLTF } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { Suspense, useEffect, useRef, useState } from "react";
 import spacemanScene from "../assets/3d/spaceman.glb";
 
@@ -12,12 +12,18 @@ const Spaceman = ({ scale, position, rotationX, rotationY }) => {
     actions["Idle"].play();
   }, [actions]);
 
+  useFrame(() => {
+    if (spacemanRef.current) {
+      spacemanRef.current.rotation.y = rotationY + performance.now() * 0.0002; 
+    }
+  });
+
   return (
     <mesh
       ref={spacemanRef}
       position={position}
       scale={scale}
-      rotation={[rotationX, rotationY, 0]} // Lock the Z rotation
+      rotation={[rotationX, rotationY, 0]}
     >
       <primitive object={scene} />
     </mesh>
@@ -30,10 +36,10 @@ const SpacemanCanvas = ({ scrollContainer }) => {
   const [scale, setScale] = useState([3, 3, 3]);
   const [position, setPosition] = useState([0.1, 0.7, 0]);
 
-  // Handle pointer move to rotate the spaceman along Y-axis
+  
   const handlePointerMove = (event) => {
     const { clientX } = event;
-    setRotationY(clientX * 0.01); // Rotate based on pointer position
+    setRotationY(clientX * 0.01);
   };
 
   useEffect(() => {
@@ -78,8 +84,8 @@ const SpacemanCanvas = ({ scrollContainer }) => {
   return (
     <Canvas
       className="w-full h-full bg-transparent z-10 max-w-screen"
-      camera={{ near: 0.1, far: 1000, fov: 98}}
-      onPointerMove={handlePointerMove} // Move only when pointer is over canvas
+      camera={{ near: 0.1, far: 1000, fov: 98 }}
+      onPointerMove={handlePointerMove} 
     >
       <directionalLight position={[1, 1, 1]} intensity={2} />
       <ambientLight intensity={0.5} />
