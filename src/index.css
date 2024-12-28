@@ -378,3 +378,9 @@ trying something out */
   }
 }
 
+.contactIcons {
+  width: 24px;
+  height: 24px;
+  margin: 0px 8px;
+  transform: translateY(6px)
+}
