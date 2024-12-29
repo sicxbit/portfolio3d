@@ -6,7 +6,7 @@ function Contact() {
     <div className="contact-box">
       <h1>Contact</h1>
       <div className="socials">
-        {/* Kaggle Section */}
+        
         <div className="card">
           
           <a href="https://www.kaggle.com/arunjithts" target="_blank" rel="noopener noreferrer">
