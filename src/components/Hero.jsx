@@ -5,6 +5,8 @@ import background from '../assets/parallax/background.svg';
 import mountains from '../assets/parallax/mountains.svg';
 import trees from '../assets/parallax/trees.svg';
 import treeline from '../assets/parallax/treeline.svg';
+import { Stars } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber';
 
 const Hero = () => {
   const { scrollY } = useContext(ScrollContext);
@@ -29,6 +31,9 @@ const Hero = () => {
             <SpacemanCanvas />
           </div>
         )}
+        <Canvas>
+          <Stars  className="stars"/>
+        </Canvas>
         <div className="mountainsAndTrees-container">
           <div className="mountains-container">
             <img src={mountains} alt="Mountains" />
