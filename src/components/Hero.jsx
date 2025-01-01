@@ -13,7 +13,13 @@ const Hero = () => {
   const showSpacemanAndTitle = scrollY <= 900;
 
   return (
+
     <div className="hero-container">
+      <div className="stars">
+        <Canvas>
+          <Stars />
+        </Canvas>
+      </div>
       <div className="background">
         {showSpacemanAndTitle && (
           <div className="title_section">
@@ -23,6 +29,7 @@ const Hero = () => {
             </span>
           </div>
         )}
+
         <div className="background-container">
           <img src={background} alt="Background" />
         </div>
@@ -31,9 +38,6 @@ const Hero = () => {
             <SpacemanCanvas />
           </div>
         )}
-        <Canvas>
-          <Stars  className="stars"/>
-        </Canvas>
         <div className="mountainsAndTrees-container">
           <div className="mountains-container">
             <img src={mountains} alt="Mountains" />
