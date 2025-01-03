@@ -142,6 +142,7 @@ button:focus-visible {
   line-height: 40px;
   color: white;
   text-align: left;
+  color: gray;
 
 
   @media (min-width: 640px) {
@@ -162,7 +163,7 @@ button:focus-visible {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 3;
+  z-index: 4;
 
   width: auto;
   height: 50%;
@@ -170,18 +171,18 @@ button:focus-visible {
 
 
 .mountains-container {
-  z-index: 4;
+  z-index: 5;
   transition: top 1s ease-in-out;
   pointer-events: none;
 }
 
 .forest_line-container {
-  z-index: 5;
+  z-index: 6;
   pointer-events: none;
 }
 
 .trees-container {
-  z-index: 6;
+  z-index: 7;
   pointer-events: none;
 }
 
@@ -259,11 +260,7 @@ button:focus-visible {
   width: 100vh;
   height: 100vh;
 }
-
-.contact-box {
-  display: flex;
-  flex-direction: column;
-}
+  
 
 .socials {
   display: flex;
@@ -397,5 +394,5 @@ trying something out */
   height: 100%;
   pointer-events: auto;
   top: -10%;
-  z-index: 2;
+  z-index: 3;
 }
