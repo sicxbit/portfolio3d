@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import NavBar from './NavBar';
 import Hero from './Hero';
-import TheCanvas from './TheCanvas'; // Import TheCanvas
 import { ScrollProvider } from './ScrollContext';
 
 function FullPageComponent() {
@@ -23,9 +22,9 @@ function FullPageComponent() {
             <div ref={fullPageRef} className="full-page-container">
                 <NavBar />
                 <Hero />
-                <TheCanvas /> 
             </div>
         </ScrollProvider>
+        
     );
 }
 

@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import SpacemanCanvas from './Spaceman.jsx';
-import { ScrollContext } from './ScrollContext';
 import background from '../assets/parallax/background.svg';
 import mountains from '../assets/parallax/mountains.svg';
 import trees from '../assets/parallax/trees.svg';

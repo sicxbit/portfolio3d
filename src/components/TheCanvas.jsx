@@ -3,10 +3,8 @@ import Experience from "./Experiance";
 
 function TheCanvas() {
     return (
-        <div>
         <div className="canvas">
             <Experience />
-        </div>
         </div>
     );
 }

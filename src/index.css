@@ -1,6 +1,8 @@
 html,
 body {
+  width: 100%;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 :root {
@@ -395,4 +397,16 @@ trying something out */
   pointer-events: auto;
   top: -10%;
   z-index: 3;
+}
+
+
+.theCanvas {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  z-index: 20;
+}
+
+.experiance {
+  
 }

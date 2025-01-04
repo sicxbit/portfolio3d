@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import FullPageComponent from './components/FullPageComponent';
 import "./index.css";
+import Core from './components/Core';
 function App() {
   useEffect(() => {
     const setBodyHeight = () => {
@@ -20,7 +21,7 @@ function App() {
 }, []);
 
   return (
-    <FullPageComponent/>
+    <Core />
   )
 }
 
