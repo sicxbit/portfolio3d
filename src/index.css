@@ -408,5 +408,9 @@ trying something out */
 }
 
 .experiance {
-  
+  background-color: balck;
+}
+
+* {
+  border: solid 1px red;
 }

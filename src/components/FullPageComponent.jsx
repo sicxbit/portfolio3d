@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import NavBar from './NavBar';
 import Hero from './Hero';
 import { ScrollProvider } from './ScrollContext';
+import Experience from './Experiance';
 
 function FullPageComponent() {
     const [scrollY, setScrollY] = useState(0);
